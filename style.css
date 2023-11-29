@@ -61,20 +61,47 @@ body * {
   margin-top: 8px;
 }
 
-/*switch*/
+/*linha em que o botão está*/
+#switch {
+  position: relative; /*relativo ao absolute abaixo*/
+  width: 64px; /*mesmo tamanho do span*/
+  margin: 4px auto; /*centraliza ao centro do página*/
+}
 
+/*switch = botão que muda para claro ou escuro*/
 #switch  button {
   width: 32px;
   height: 32px;
   background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
-  
+
+  position: absolute; /*sobreposição de camadas*/
+  top: 50%; /*50% do elemento do topo*/
+  left: 0;
+  z-index: 1; /*1 "andar" acima do span*/
+  transform: translateY(-50%); /*move o elemento para cima ou para baixo*/
+}
+
+.light #switch button {
+  right: 0;
+  left: initial; /*left volta para maneira inicial*/
+}
+
+/*fundo do botão*/
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
 }
 
 /*links*/
 ul {
-  list-style: none;
+  list-style: none; /*remove os estilos de uma linha*/
 
   display: flex;
   flex-direction: column;
