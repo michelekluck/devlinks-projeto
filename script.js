@@ -18,12 +18,12 @@ function toggleMode() {
   if(html.classList.contains("light")) {
     img.setAttribute( // modo claro
       "alt",
-      "Foto de Mayk Brito sorrindo, usando óculos escuro, jaqueta cinza, sem barba e fundo gradiente do roxo claro ao azul claro"
+      "Foto de Michele Kluck sorrindo sem os dentes, usando óculos escuro, regata preta, e fundo gradiente azul claro"
     )
   } else { 
     img.setAttribute( // modo escuro
     "alt", 
-    "Foto de Mayk Brito sorrindo, usando óculos e camisa preta, barba e fundo amarelo."
+    "Foto de Michele Kluck sorrindo sem os dentes, sem oculos e regata preta, ee fundo gradiente do branco ao rosa claro."
     )
   }
 }
