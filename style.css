@@ -83,11 +83,15 @@ body * {
   left: 0;
   z-index: 1; /*1 "andar" acima do span*/
   transform: translateY(-50%); /*move o elemento para cima ou para baixo*/
+  animation: slide-out 0.2s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial; /*left volta para maneira inicial*/
+  animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 /*fundo do botão*/
@@ -177,5 +181,24 @@ footer {
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left:0;
   }
 }
