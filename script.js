@@ -21,8 +21,7 @@ function toggleMode() {
       "Foto de Michele Kluck sorrindo sem os dentes, com uma regata preta, e um fundo desfocado"
     )
   } else { 
-    img.setAttribute(
-      // modo escuro
+    img.setAttribute( // modo escuro
       "alt",
       "Foto de Michele Kluck sorrindo sem os dentes, com uma regata preta, e um fundo desfocado."
     )
